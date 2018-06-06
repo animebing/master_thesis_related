@@ -1,0 +1,4 @@
+video_demo.py -> ./tools/
+imgs2video_demo.py -> ./tools/
+generate_detections.py -> ./tools/
+vis.py -> ./lib/utils/
