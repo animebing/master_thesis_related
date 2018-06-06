@@ -1,0 +1,6 @@
+I am trying to train mask rcnn(Detectron) using kaist dataset for pedestrian detection. for Detectron, the annotations are asked to be constructed
+as json file like COCO dataset, so here I need to convert the original kaist dataset format to json format, here I use two steps:
+1. kaist_to_voc_format.py: use code the kaist dataset provides to convert kaist dataset to pascal voc xml format, I make some modifications compared
+to the original code: i) add "visible" based directory structure and image extension for later usage. ii) only do conversion for images with person
+2. pascal_voc_xml2json.py: based on the code https://github.com/CivilNet/Gemfield/blob/master/src/python/pascal_voc_xml2json/pascal_voc_xml2json.py
+to convert xml file in step 1 to COCO like json file
