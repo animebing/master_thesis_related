@@ -1,0 +1,6 @@
+Attention: before processing, warm up with one image(the first forward is very slow)
+
+detect4files.py: do detections for all images of one video sequentially, show results using opencv and show processing time for each image
+video_demo.py: do detection for one video using opencv, show results or store results in one new video.
+generate_detections_npy.py & generate_detections_txt.py: store the detection results for one sequence in one numpy file or one txt file, because
+the purpose of two scripts is different, so I write two different scripts.
