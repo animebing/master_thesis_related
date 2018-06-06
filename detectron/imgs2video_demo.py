@@ -1,4 +1,4 @@
-"""Perform detection on a video and store the result in another video
+"""Perform detection on all images of a video and store the result in one video
 """
 
 from __future__ import absolute_import
