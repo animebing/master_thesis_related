@@ -2,3 +2,15 @@ video_demo.py -> ./tools/
 imgs2video_demo.py -> ./tools/
 generate_detections.py -> ./tools/
 vis.py -> ./lib/utils/
+dataset_catelog -> ./lib/datasets/
+train_net.py -> ./tools/
+infer_simple.py -> ./tools/
+
+In order to train mask rcnn on kaist dataset, I have convert the kaist annotation to json file in advance, then I need to make
+kaist data and annotation known for Detectron, which means to add kaist items in ./lib/datasets/dataset_catelog.py
+
+Because I just want to do pedestrian detection, so here I turn off the mask branch in yaml config file by "MASK_ON: False", here 
+"kaist_e2e_mask_rcnn_R-50-FPN.yaml" is the config file
+
+In the original "infer_simple.py" file, the detection result is stored in a pdf file, which is not convenient for online check,
+so I use opencv to show the detection result as soon as the image is processed. 
