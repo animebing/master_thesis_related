@@ -7,3 +7,5 @@ the purpose of two scripts is different, so I write two different scripts.
 
 Another thing I need to mention: there is also a pytorch-yolo2 repository, when you use the weights of yolo3 in that repository, the results 
 are wrong, because the header of yolo2 and yolo3 in darknet is different, more information can refer to https://github.com/marvis/pytorch-yolo2/issues/39 
+
+there is a very good tutorial for pytorch yolov3 implementation in https://blog.paperspace.com/how-to-implement-a-yolo-object-detector-in-pytorch/
