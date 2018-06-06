@@ -1,4 +1,4 @@
-"""Perform inference on a video
+"""Perform detection on a video and store the result in another video
 """
 
 from __future__ import absolute_import
