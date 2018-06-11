@@ -159,7 +159,7 @@ def generate_features(encoder, mot_dir, output_dir, detection_dir=None, detectio
     seqs = glob.glob(os.path.join(mot_dir, "*-"+detection_type))
     seqs.sort()
     print(seqs)
-    #for sequence in os.listdir(mot_dir):
+    
     all_minus_one = -1 * np.ones((3,), dtype=np.float32)
     for sequence_dir in seqs:
         sequence = os.path.basename(sequence_dir)
