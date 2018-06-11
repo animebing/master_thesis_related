@@ -1,0 +1,21 @@
+deep_sort(https://github.com/nwojke/deep_sort) is the main repository I use for my thesis, and my thesis is the performance analysis
+for tracking method deep sort(https://arxiv.org/pdf/1703.07402.pdf). Here I will describe the function of some files and the modification
+that I made.
+
+1. ./deep_sort_app.py: run deep sort for one MOT17 sequence, here you can embed feature encoder from method "Deep Cosine Metric 
+Learning" (https://ieeexplore.ieee.org/document/8354191/) online.
+
+2 ./deep_sort_det.py: store the tracking results to find the best score threshold for each detection method.
+
+3 ./deep_sort_joint: store the tracking results to find the best score threshold for method "joint detection and identification 
+feature learning for person search" (https://arxiv.org/pdf/1604.01850.pdf)
+
+4. ./deep_sort_final: store the tracking results for each detection method with the best score threshold.
+
+5 ./deep_sort_store: store the tracking results to find the best occlusion length.
+
+6 ./deep_sort_yolo3.py: run deep_sort with yolo3 to generate detection for each frame online, but here I use IOU metric instead of apperance metric
+bacause there may be conflicts when runing pytorch and tensorflow together with GPU.
+
+6. /deep_sort_yolo3_video.py: run deep_sort with yolo3 and video file as input
+
