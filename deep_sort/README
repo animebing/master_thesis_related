@@ -19,3 +19,20 @@ bacause there may be conflicts when runing pytorch and tensorflow together with 
 
 6. /deep_sort_yolo3_video.py: run deep_sort with yolo3 and video file as input
 
+7./application_util/visualization.py: draw detection or tracking for visualization
+
+8 ./deep_sort/tracker.py: the main tracking procedure, initialize new track, predict and update for each track. Here I add some lines of code in 
+"_match" function to see the effectiveness of Mahalanobis distance, and switching between IOU metric and appearance metric for matching.
+
+9 ./application_util/image_viewer.py: exact visualization API and some script to interact with video such as stop, resume video. here I add 
+some lines of code to store the visualized tracking result as image for later use in my thesis.
+
+10. ./deep_sort/linear_assignment.py: cascade matching procedure, here I add some lines of code to do global matching.
+
+11. ./deep_sort/kalman_filter.py: how kalman filter works, the way here to do matrix computation is very interesting.
+
+12. ./tools/generate_features_all.py: store the detection and corresponding feature for all MOT17 sequences with a specific detection method.
+
+12 ./tools/generate_features_one.py: store the detection and corresponding feature for one customer sequence and the sequence directory structure 
+is same as MOT17 sequences.
+
