@@ -1,0 +1,17 @@
+KCFpy(https://github.com/uoip/KCFpy) is the python implementation of KCF(Kernelized Correlation Filter), when my thesis is asked to be modified,
+I use KCF to take place of the use of kalman filter in deep_sort(https://github.com/nwojke/deep_sort), here I will write down what I have modified
+in KCFpy and deep_sort. What I need to mention is that I place KCFpy repository in deep_sort repository. 
+
+1. During tracking in deep_sort, prediction and update are in two different functions, but in KCFpy, it is one function named "update" in ./KCFpy/kcftracker.py,
+so I separate it into two function named "predict" and "update" respectively.
+
+2. in KCFpy, the image of current frame is required to do prediction and update, so I change the corresponding API in ./deep_sort/tracker.py
+
+3. there is one KCF for one object, so I change the way to do "_initiate_track" in ./deep_sort/tracker.py
+
+4. the class "KCFTracker" in ./KCFpy/kcftracker.py have the same effect as the class "Track" in ./deep_sort/track.py, so I copy many functions
+from "Track" to "KCFTracker".
+
+5. I use IOU metric to compute dissimilarity, So I use "gated_iou_metric" in "_match" in ./deep_sort/tracker.py
+
+6. run ./deep_sort_kcf for tracking with KCF.
