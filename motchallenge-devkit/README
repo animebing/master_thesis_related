@@ -1,0 +1,11 @@
+During the evaluation of MOT, I use the devkit provided by MOTChallenge(https://motchallenge.net/data/MOT17/), here 
+I will describe the function of some files:
+1. mot_eval.m: basic evaluation.
+2. mot_eval_det.m: evaluation of the tracking results for one detection method with different score thresholds.
+3. mot_eval_sep.m: evaluation of the tracking results for one detection method with the best score threshold.
+4. mot_eval_sep_all.m: evaluation of the tracking results for all detection methods with corresponding best score threshold.
+5. write_to_csv.m: write the evaluation results to csv file for following use.
+
+During the use of the evaluation code, I find evaluation parameter "minvis" (which represents what kind of groundtruth is considered 
+for tracking and detection) is different, so the results of tracking and detection are not consistent. You can change the value of 
+"minvis" in ./utils/preprocessResult.m
